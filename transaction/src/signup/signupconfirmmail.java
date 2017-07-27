@@ -55,7 +55,7 @@ public class signupconfirmmail
         	   message.setFrom(from);
         	   message.setRecipient(Message.RecipientType.TO,to);
         	   Transport transport=session.getTransport();
-        	   transport.connect("shaharyarshamshi@gmail.com", "MODERNHITLER");
+        	   transport.connect("your email", "yourpassword");//enter the email and password
         	   transport.sendMessage(message, message.getAllRecipients());
         	   transport.close();
         	   
