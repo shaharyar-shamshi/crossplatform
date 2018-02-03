@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;transaction/WebContent/NewFile.jsp&apos; to &apos;loginfailed.jsp&apos;" description="Rename resource &apos;NewFile.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/NewFile.jsp" name="loginfailed.jsp" stamp="1517643112368" updateReferences="true"/>
+</session>

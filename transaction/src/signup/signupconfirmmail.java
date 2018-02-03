@@ -51,11 +51,11 @@ public class signupconfirmmail
            try
            {
         	   Address to=new InternetAddress(email);
-        	   Address from=new InternetAddress("email"); //the sender email id
+        	   Address from=new InternetAddress("shaharyarshamshi@gmail.com"); //the sender email id
         	   message.setFrom(from);
         	   message.setRecipient(Message.RecipientType.TO,to);
         	   Transport transport=session.getTransport();
-        	   transport.connect("your email", "yourpassword");//enter the email and password
+        	   transport.connect();//enter the email and password
         	   transport.sendMessage(message, message.getAllRecipients());
         	   transport.close();
         	   

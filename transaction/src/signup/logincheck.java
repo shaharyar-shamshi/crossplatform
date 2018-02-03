@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,6 +35,7 @@ public class logincheck extends HttpServlet {
 	       int k=0;  //use to check whether the user id is present
 	       int c=0;  //use to check whether password is correct
 	       String msg=null;
+	       String redirect=null;
 	       try
 	       {
 	          Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -48,30 +51,35 @@ public class logincheck extends HttpServlet {
 	    	   PreparedStatement s;
 	    	   s=conn.prepareStatement("SELECT *FROM user where username=?");
 	    	   s.setString(1,userid );
-	    	   ResultSet rs=s.getResultSet();
-	    	   if(rs.next()==false)
+	    	   ResultSet rs=s.executeQuery();
+	    	   if(rs.next())
 	    	   {
 	    		   k=1;
-	    		   msg="user id do not exist";
 	    	   }
 	    	  // rs.close();
 	    	   //s.close();
-	    	   if(k==0)
+	    	   else
+	    	   {
+	    		   msg="user id do not exist";
+	    		   request.setAttribute("msg", msg);
+	    	   }
+	    	   if(k==1)
 	    	   {
 	    		   s=conn.prepareStatement("Select password from user where  username=?");
 	    		 // s.setString(1, password);
 	    		  s.setString(1, userid);
-	    		   rs=s.getResultSet();
+	    		   rs=s.executeQuery();
 	    		   while(rs.next())
 	    		   {
 	    			   if(rs.getString(1).equals(password))
-	    				   c=0;
-	    			   else
 	    				   c=1;
+	    			   else
+	    				   c=0;
 	    		   }
-	    		   if(c==1)
+	    		   if(c==0)
 	    		   {
 	    			   msg="password is invalid";
+	    			   request.setAttribute("msg", msg);
 	    		   }
 	    		  
 	    	   }
@@ -81,9 +89,22 @@ public class logincheck extends HttpServlet {
 	       {
 	    	  System.out.println(e); 
 	       }
-	       PrintWriter printer=response.getWriter();
-	       printer.println(msg);
+	       request.setAttribute("msg", msg);
+	       if((c==0 && k==1))
+	    	   redirect="/loginfailed.jsp";
+	       else if (k==0)
+	    	   redirect = "/loginfailed.jsp";
+	       else if(c==1 && k==1)
+	       {
+	    	   msg ="welcome";
+	    	   request.setAttribute("msg", msg);
+	    	   redirect = "/home.jsp";
+	       }
+	       ServletContext sc=this.getServletContext();
+	  	 RequestDispatcher dispatcher=sc.getRequestDispatcher(redirect);
+	       dispatcher.forward(request, response);  
+
 	       
 	}
-
+	
 }

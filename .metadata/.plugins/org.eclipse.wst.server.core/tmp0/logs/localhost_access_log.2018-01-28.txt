@@ -1,0 +1,10 @@
+127.0.0.1 - - [28/Jan/2018:16:19:03 +0530] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [28/Jan/2018:16:19:29 +0530] "GET /transaction/ HTTP/1.1" 200 1282
+127.0.0.1 - - [28/Jan/2018:16:21:01 +0530] "POST /transaction/check HTTP/1.1" 500 1745
+127.0.0.1 - - [28/Jan/2018:16:21:18 +0530] "POST /transaction/check HTTP/1.1" 200 368
+127.0.0.1 - - [28/Jan/2018:16:21:20 +0530] "GET /transaction/login.html HTTP/1.1" 200 446
+127.0.0.1 - - [28/Jan/2018:16:29:24 +0530] "GET /transaction/signup.html HTTP/1.1" 200 1282
+127.0.0.1 - - [28/Jan/2018:16:31:45 +0530] "POST /transaction/check HTTP/1.1" 500 1715
+127.0.0.1 - - [28/Jan/2018:16:31:59 +0530] "POST /transaction/check HTTP/1.1" 200 368
+127.0.0.1 - - [28/Jan/2018:16:39:11 +0530] "POST /transaction/check HTTP/1.1" 200 1541
+127.0.0.1 - - [28/Jan/2018:16:50:23 +0530] "POST /transaction/check HTTP/1.1" 200 368

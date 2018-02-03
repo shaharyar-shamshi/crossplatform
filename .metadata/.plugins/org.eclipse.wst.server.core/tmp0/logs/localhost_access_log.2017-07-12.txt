@@ -1,0 +1,8 @@
+127.0.0.1 - - [12/Jul/2017:02:43:43 +0530] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [12/Jul/2017:02:43:44 +0530] "GET /transaction/signupsuccess.jsp HTTP/1.1" 200 368
+127.0.0.1 - - [12/Jul/2017:02:43:44 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [12/Jul/2017:02:44:12 +0530] "GET /transaction/signupsuccess.jsp HTTP/1.1" 200 368
+0:0:0:0:0:0:0:1 - - [12/Jul/2017:02:44:12 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [12/Jul/2017:02:44:15 +0530] "GET /transaction/login.html HTTP/1.1" 200 446
+0:0:0:0:0:0:0:1 - - [12/Jul/2017:02:44:28 +0530] "POST /transaction/logincheck HTTP/1.1" 200 5
+127.0.0.1 - - [12/Jul/2017:02:46:37 +0530] "GET /transaction/login.html HTTP/1.1" 304 -

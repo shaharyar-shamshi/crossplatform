@@ -1,0 +1,12 @@
+127.0.0.1 - - [28/Jul/2017:01:08:59 +0530] "GET /transaction/WEB-INF/classes/signup/signupconfirmmail.java HTTP/1.1" 404 992
+127.0.0.1 - - [28/Jul/2017:01:12:17 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [28/Jul/2017:01:12:52 +0530] "POST /transaction/check HTTP/1.1" 404 1028
+127.0.0.1 - - [28/Jul/2017:01:16:08 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [28/Jul/2017:01:16:31 +0530] "POST /transaction/check HTTP/1.1" 404 1028
+127.0.0.1 - - [28/Jul/2017:01:33:12 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [28/Jul/2017:01:33:33 +0530] "POST /transaction/check HTTP/1.1" 404 1028
+127.0.0.1 - - [28/Jul/2017:01:37:28 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [28/Jul/2017:01:38:17 +0530] "POST /transaction/check HTTP/1.1" 200 368
+127.0.0.1 - - [28/Jul/2017:01:45:10 +0530] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [28/Jul/2017:01:45:26 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [28/Jul/2017:01:45:57 +0530] "POST /transaction/check HTTP/1.1" 200 368
