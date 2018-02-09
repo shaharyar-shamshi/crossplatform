@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<title>Sign Up Page</title>
+
+</head>
+<style>
+h1 
+{
+    color: BLACK;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 900;
+}
+form
+{
+font-weight: 600;
+}
+body 
+{
+    background-image:url('back.jpg') 
+}
+}
+</style>
+<body style="background-size: cover;">
+<h1>
+	Sign Up Page
+</h1>
+<form action="check" method="post" >
+<table align="center">
+<tr>
+<td>
+Enter Your name:</td>
+<td><input name="name" type="text" length=30 placeholder="Enter Here">
+</td>
+</tr>
+<tr>
+<td> Select your username </td>
+<td> <input name="username" placeholder="abc123" length=30 type="text"/>
+</tr>
+<tr>
+<td> Enter Your password:</td>
+<td> <input name="password" type="password" placeholder="******" length=30/> </td>
+</tr>
+<tr>
+<td>
+Select the merchant type:
+</td>
+<td>
+<p></p>
+<p></p>
+
+ <select name="merchant">
+  <option value="Paytm">Paytm</option>
+  <option value="Mobikwik">Mobikwik</option>
+  <option value="Freecharge">Freecharge</option>
+</select> 
+</td>
+</tr>
+<tr>
+<td>Gender: </td>
+<td>
+<p> </p>
+<input type="radio" value="Male" name="gender"/>Male<br/>
+<input type="radio" value="Female" name="gender" />Female <br/>
+</td>
+
+</tr>
+<tr>
+<td>
+Email id:
+</td>
+<td>
+<input type="text" name="email" placeholder="abc@email.com" length=30/>
+</td>
+</tr>
+<tr>
+<td>
+Mobile no.:
+</td>
+<td>
+<input type="text" name="mobile" placeholder="1234567890"length=30 /></td>
+</tr>
+<tr>
+<td>
+</td>
+<td><button class="btn btn-primary"> Sign up</button>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,86 @@
+package signup;
+
+import java.io.IOException;
+import java.sql.*;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+/**
+ * Servlet implementation class paylogic
+ */
+@WebServlet("/paylogic")
+public class paylogic extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public paylogic() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String payto=request.getParameter("payto");
+		String userid=request.getAttribute("userid").toString();
+		Integer balance=Integer.parseInt(request.getParameter("amount"));
+		Connection conn=null;
+	       String id="SHAHARYARSHAMSHI";
+	       String passcode="shahbazshamshi";
+	       String url="jdbc:mysql://localhost/cookbook?useSSL=false";
+	       try
+	       {
+	          Class.forName("com.mysql.jdbc.Driver").newInstance();
+	          conn=DriverManager.getConnection(url, id, passcode);
+	          
+	       }
+	       catch (Exception e)
+	       {
+	           System.out.println(e);
+	       }
+	       try
+	       {
+	       PreparedStatement s;
+	       s=conn.prepareStatement("select balance from user where username=?");
+	       s.setString(1, userid);
+	       s.executeQuery();
+	       ResultSet rs=s.getResultSet();
+	       int amount=rs.getInt(1)-balance;
+	       s=conn.prepareStatement("update user set balance=? where username=? ");
+	       s.setInt(1, amount);
+	       s.setString(2,userid);
+	       s.executeUpdate();
+	       s=conn.prepareStatement("select balance from user where username=?");
+	       s.setString(1, payto);
+	       s.executeQuery();
+	        rs=s.getResultSet();
+	       amount=rs.getInt(1)+balance;
+	       s=conn.prepareStatement("update user set balance=? where username=? ");
+	       s.setInt(1, amount);
+	       s.setString(2,payto);
+	       s.executeUpdate();
+	       }
+	       catch(Exception e)
+	       {
+	    	   
+	       }
+	}
+
+}

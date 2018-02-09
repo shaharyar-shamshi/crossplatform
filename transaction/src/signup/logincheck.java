@@ -8,6 +8,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -98,8 +99,50 @@ public class logincheck extends HttpServlet {
 	       {
 	    	   msg ="welcome";
 	    	   request.setAttribute("msg", msg);
+	    	   request.setAttribute("userid", userid);
+	    	   try
+	    	   {
+	    	   PreparedStatement s;
+	    	   String name="",merchant="",emailid="";
+	    	   int balance=0;
+	    	   s=conn.prepareStatement("select name ,merchant,emailid,balance from user where username=?");
+	    	   s.setString(1, userid);
+	    	   ResultSet rs=s.executeQuery();
+	    	   while(rs.next())
+	    	   {
+	    		 name =rs.getString(1);
+	    	   
+	    	    merchant=rs.getString(2);
+	    	    emailid=rs.getString(3);
+	    	   balance =rs.getInt(4);
+	    	   }
+	    	   
+	    	   request.setAttribute("name", name);
+	    	   request.setAttribute("merchant", merchant);
+	    	   request.setAttribute("emailid", emailid);
+	    	   request.setAttribute("balance", balance);
+	    	   
+	    	   rs.close();
+	    	   Cookie first=new Cookie("userid",userid);
+	   	    first.setMaxAge(60*60*24);
+	   	    first.setPath("/");
+	   	    response.addCookie(first);
+	    	   
+	    	   }
+	    	   catch(Exception e)
+	    	   {
+	    		   
+	    	   }
+	    	   
+	    	   
 	    	   redirect = "/home.jsp";
 	       }
+	       try
+	       {
+	       conn.close();
+	       }
+	       catch (Exception e)
+	       {}
 	       ServletContext sc=this.getServletContext();
 	  	 RequestDispatcher dispatcher=sc.getRequestDispatcher(redirect);
 	       dispatcher.forward(request, response);  
