@@ -21,7 +21,7 @@
 <style>
    body 
    {
-    background-image:url('/home/ayush/Downloads/back.jpg') 
+    background-image:url('back.jpg') 
    }
    h1 
    {
@@ -90,6 +90,8 @@ Select the merchant type:
 <p> </p>
 <input type="radio" value="Male" name="gender"/>Male<br/>
 <input type="radio" value="Female" name="gender" />Female <br/>
+<input type="radio" value="other"  name="gender" />other <br/>
+
 </td>
 
 </tr>

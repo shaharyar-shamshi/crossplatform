@@ -1,9 +1,25 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		body
+{
+	background-image: url(back.jpg);
+	font-size: x-large;
+}
+.login-btn
+{
+	font-size: x-large;
+}
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -12,20 +28,28 @@
 <table align="center">
 <tr>
 <td>
-username:
-</td>
-<td>
-<input type="text" name="userid" length=25/>
+User Name:
 
+
+<input type="text" name="userid" length=25/>
 </td>
+
+
+<td> Password:
+<input type="password" name="password" length=25 /></td>
 </tr>
 <tr>
-<td> password:</td>
-<td><input type="password" name="password" length=25 /></td>
 </tr>
+
 <tr>
-<td></td>
-<td><input type="submit" value="login" /></td>
+<td align="center">
+
+<button class="btn btn-primary">LOGIN</button>
+</td>
+<td align="center">
+
+<button class="btn btn-primary">SIGNUP</button>
+</td>
 </tr>
 </table>
 </form>

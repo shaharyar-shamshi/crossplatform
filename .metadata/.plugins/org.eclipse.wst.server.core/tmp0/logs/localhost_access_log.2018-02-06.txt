@@ -1,0 +1,8 @@
+127.0.0.1 - - [06/Feb/2018:02:43:30 +0530] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [06/Feb/2018:02:43:41 +0530] "GET /transaction/front.html HTTP/1.1" 304 -
+127.0.0.1 - - [06/Feb/2018:02:43:43 +0530] "GET /transaction/back.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [06/Feb/2018:02:43:44 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [06/Feb/2018:02:44:23 +0530] "GET /transaction/signup.html HTTP/1.1" 304 -
+127.0.0.1 - - [06/Feb/2018:02:46:10 +0530] "POST /transaction/check HTTP/1.1" 200 1199
+127.0.0.1 - - [06/Feb/2018:02:46:13 +0530] "GET /transaction/loginpage.html HTTP/1.1" 304 -
+127.0.0.1 - - [06/Feb/2018:02:46:24 +0530] "POST /transaction/logincheck HTTP/1.1" 200 1643

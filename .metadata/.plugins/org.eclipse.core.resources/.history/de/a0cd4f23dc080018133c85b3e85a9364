@@ -1,0 +1,40 @@
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<style type="text/css">
+		body
+{
+	background-image: url(back.jpg);
+	font-size: x-large;
+}
+.login-btn
+{
+	font-size: x-large;
+}
+	</style>
+	
+<title>Insert title here</title>
+</head>
+<body>
+<p align="center"> <%= request.getAttribute("msg") %> </p>
+<form align="center" action="logincheck" method="post"> 
+<table align="center">
+<tr>
+<td>
+User Name:
+</td>
+<td>
+<input type="text" name="userid" length=25/>
+</td>
+<td> Password:</td>
+<td><input type="password" name="password" length=25 /></td>
+</tr>
+</table>
+<br><br>
+
+<input class="login-btn" type="submit" value="login" style="color: white; padding: 8px 60px; background-color: green align="center" />
+</form>
+
+</body>
+</html>
