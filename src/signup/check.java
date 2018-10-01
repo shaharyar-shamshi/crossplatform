@@ -33,6 +33,7 @@ public class check extends HttpServlet {
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name=request.getParameter("name");
+		String userid=request.getParameter("username");
 		String password=request.getParameter("password");
 		String email=request.getParameter("email");
 		String merchant=request.getParameter("merchant");
